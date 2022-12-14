@@ -1,231 +1,233 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    padding: 0;
-    margin: 0;
+@charset "UTF-8";
+/* declaro las grid area general*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+header section {
+  grid-area: logo;
 }
 
-html{
-    font-size: 62.5%;
+nav {
+  grid-area: nav;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: goldenrod;;
-
+footer {
+  grid-area: footer;
 }
 
-header{
-    font-size: large;
-    display: grid;
-    justify-content: center;
+.equipo_trabajo {
+  grid-area: equipo;
 }
 
-nav ul li{
-    list-style-type: none;
+section h2 {
+  grid-area: consulta;
 }
 
-nav ul{
-    color: goldenrod;
-    border: 3px solid goldenrod;
+/* declaro las grid area index*/
+.div1 {
+  grid-area: div1;
 }
 
-a{
-    color: white;
-    text-decoration: none;
+.p1 {
+  grid-area: p1;
 }
 
-p, h1, h2, h3{
-    color: white;
+.div2 {
+  grid-area: div2;
 }
 
-.acompañamiento{
-    background-color: #3a3548;
+.p2 {
+  grid-area: p2;
 }
 
-footer{
-    padding: 3em;
-    background-color: #3a3548;
-    margin-bottom: 0;
-    margin-top: 1.5em;
+.div3 {
+  grid-area: div3;
 }
 
-.quienes_somos, .quienes{
-    background-color: #3a3548;
-    margin-bottom: 15px;
-    padding: 15px;
-}
-.quienes_somos div, .quienes_somos p{
-    border: 3px solid goldenrod;
+.p3 {
+  grid-area: p3;
 }
 
-.quienes_somos div{
-    border: 3px solid goldenrod;
+/* declaro las grid area nuestros planes*/
+.p208 {
+  grid-area: p208;
 }
 
-section h2{
-    background-color: #3a3548;
-    padding: 10px;
-}
-.clientes_felices img{
-    width: 300px;
-    height: 200px;
-    border: #3a3548 solid 5px;
-}
-.autos, .tu_0{
-    background-color: #3a3548;
-    border: goldenrod solid 5px;
-}
-.a208, .apartner{
-    border: goldenrod solid 5px;
+.autop1 {
+  grid-area: descripcion208;
 }
 
-/* declaro las grid area*/
-
-header section{
-    grid-area: logo;
-}
-nav{
-    grid-area: nav;
-}
-footer{
-    grid-area: footer;
-}
-.equipo_trabajo{
-    grid-area: equipo;
+.partner {
+  grid-area: partner;
 }
 
-.div1{
-    grid-area: div1;
+.autop2 {
+  grid-area: descripcionp;
 }
-
-.p1{
-    grid-area: p1;
-}
-.div2{
-    grid-area: div2;
-}
-
-.p2{
-    grid-area: p2;
-}
-.div3{
-    grid-area: div3;
-}
-
-.p3{
-    grid-area: p3;
-}
-
-section h2{
-    grid-area: consulta;
-}
-
-
 
 /* empiezo la grilla general*/
-header{
-    background-color: #3a3548;
-    margin-bottom: 1.5em;
+header {
+  background-color: #3a3548;
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-template-areas: "logo" "nav" "equipo" "consulta" "footer";
+  gap: 20px;
+}
+@media (min-width: 500px) {
+  header header {
+    margin: 0;
     display: grid;
-    grid-template-areas:
-    "logo"
-    "nav"
-    "equipo"
-    "consulta"
-    "footer";
-    gap: 20px;
+    grid-template-areas: "logo     nav" "consulta   consulta" "footer     footer";
+    gap: 5px;
+    grid-template-columns: 1fr 3fr;
+  }
 }
-.quienes_somos{
-    margin: 0;
-        display: grid;
-        grid-template-areas:
-        "div1 p1"
-        "div2 p2"
-        "div3 p3";
-        gap: 20px;
-        grid-template-columns: 1fr 3fr;
+@media (min-width: 768px) {
+  header header {
+    display: grid;
+    grid-template-areas: "logo       logo     logo" "nav        nav      nav" "consulta   consulta consulta" "footer     footer   footer";
+    gap: 5px;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
 
-.equipo_trabajo img{
-    border: 8px solid goldenrod;
-    margin-top: 5px;
+.quienes_somos {
+  margin: 0;
+  display: grid;
+  grid-template-areas: "div1 p1" "div2 p2" "div3 p3";
+  gap: 20px;
+  grid-template-columns: 1fr 3fr;
+}
+@media (min-width: 500px) {
+  .quienes_somos .quienes_somos {
+    display: grid;
+    grid-template-areas: "div1 p1" "div2 p2" "div3 p3";
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media (min-width: 768px) {
+  .quienes_somos .quienes_somos {
+    display: grid;
+    grid-template-areas: "div1 div2 div3" "p1   p2   p3";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-/*declarar mi 1er MQ*/
-@media(min-width:500px){
-    header{
-        margin: 0;
-        display: grid;
-        grid-template-areas:
-        "logo     nav"
-        "consulta   consulta"
-        "footer     footer";
-        gap: 5px;
-        grid-template-columns: 1fr 3fr;
+.autos {
+  margin: 0;
+  display: grid;
+  grid-template-areas: "p208    descripcion208" "partner descripcionp";
+  grid-template-columns: 2fr 2fr;
+}
+@media (min-width: 500px) {
+  .autos .a208 {
+    display: grid;
+    grid-template-areas: "p208    descripcion208" "partner descripcionp";
+    grid-template-columns: 2fr 3fr;
+  }
 }
 
-
-.quienes_somos{
-    margin: 0;
-        display: grid;
-        grid-template-areas:
-        "div1 p1"
-        "div2 p2"
-        "div3 p3";
-        gap: 20px;
-        grid-template-columns: 1fr 3fr;
+.equipo_trabajo img {
+  border: 8px solid rgb(32, 181, 218);
+  margin-top: 5px;
 }
 
-nav ul{
+@media (min-width: 500px) {
+  nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: goldenrod;
-    border: 3px solid goldenrod;
+    color: rgb(32, 175, 218);
+    border: 3px solid rgb(32, 190, 218);
     margin-top: 30px;
-}
-
-ul li{
+  }
+  nav ul li {
     padding: 1px;
+  }
+}
+footer {
+  margin-top: 0;
 }
 
-}
-footer{
-    margin-top: 0;
-}
-
-
-/*segunda MQ*/
-@media(min-width:768px){
-    header{
-        margin: 0;
-        display: grid;
-        grid-template-areas:
-        "logo       logo     logo"
-        "nav        nav      nav"
-        "consulta   consulta consulta"
-        "footer     footer   footer";
-        gap: 5px;
-        grid-template-columns: 1fr 3fr 1fr;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
 }
-.quienes_somos{
-    margin: 0;
-        display: grid;
-        grid-template-areas:
-        "div1 div2 div3"
-        "p1   p2   p3";
-        gap: 20px;
-        grid-template-columns: 1fr 1fr 1fr;
-} 
 
-@media(min-width:1024px){
-    
+body {
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(32, 159, 218);
 }
+body header {
+  font-size: large;
+  display: grid;
+  justify-content: center;
+}
+body header nav ul {
+  color: rgb(32, 144, 218);
+  border: 3px solid rgb(32, 181, 218);
+}
+body header nav ul li {
+  list-style-type: none;
+  border: rgb(0, 183, 255);
+}
+body header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+body footer {
+  padding: 3em;
+  background-color: #3a3548;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+
+p, h1, h2, h3 {
+  color: white;
+}
+
+.quienes_somos, .quienes {
+  background-color: #3a3548;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.quienes_somos div, .quienes_somos p, .quienes div, .quienes p {
+  border: 3px solid rgb(32, 196, 218);
+}
+
+.acompañamiento {
+  background-color: #3a3548;
+}
+
+section h2 {
+  background-color: #3a3548;
+  padding: 10px;
+}
+
+.clientes_felices img {
+  width: 300px;
+  height: 200px;
+  border: #3a3548 solid 5px;
+}
+
+.autos, .tu_0 {
+  background-color: #3a3548;
+  border: rgb(32, 196, 218) solid 5px;
+}
+
+.a208, .apartner {
+  border: rgb(32, 206, 218) solid 5px;
+}
+
+.a208 p, .apartner p {
+  border: rgb(66, 198, 250);
+}/*# sourceMappingURL=estilos.css.map */
