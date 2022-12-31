@@ -1,11 +1,130 @@
-.autos, .tu_0{
-    background-color: #3a3548;
-    border: rgb(32, 196, 218) solid 5px;
-}
-.a208, .apartner{
-    border: rgb(32, 206, 218) solid 5px;
+/*aca entra una animacion de capa en la que hay que apretar la imagen*/
+.autos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
-.a208 p, .apartner p{
-    border: rgb(66, 198, 250);
+.autos figure {
+    position: relative;
+    height: 250px;
+    cursor: pointer;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
 }
+
+.autos figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+
+.autos figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103, 123, 0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.autos figure:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.autos figure:hover>.capa h3 {
+    margin-bottom: 15px;
+}
+
+
+.autos figure .capa2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103, 123, 0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.autos figure:hover>.capa2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.autos figure:hover>.capa2 h3 {
+    margin-bottom: 15px;
+}
+
+.autos figure:hover>img {
+    transform: scale(1.3);
+}
+
+.autos figure .capa h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+
+.autos figure .capa p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.autos figure .capa2 h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+
+.autos figure .capa2 p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.tu_0{
+    h2, p{
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        color: aqua;
+    }
+}
+/*declaro 1er mediaquery*/
+@media(min-width:500px){
+    .autos{
+        display: flex;
+        flex-direction: row;
+    }
+}
+/*declaro 2da mediaquery*/
+@media(min-width:768px){
+    .autos{
+    padding: 5rem;
+    }
+}
+

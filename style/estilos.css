@@ -1,233 +1,312 @@
-@charset "UTF-8";
-/* declaro las grid area general*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-header section {
-  grid-area: logo;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-nav {
-  grid-area: nav;
+html {
+  font-size: 62.5%;
 }
 
-footer {
-  grid-area: footer;
+header section div {
+  display: flex;
+  justify-content: center;
+}
+header section h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 7rem;
+}
+
+.navcolor {
+  background-color: rgb(6, 191, 204);
+}
+.navcolor .boton {
+  color: white;
+}
+
+.nav-link {
+  color: #3a3548;
+  font-size: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.boton {
+  color: white;
+}
+
+.navbar-toggler {
+  border: 1px solid #f9fafb;
 }
 
 .equipo_trabajo {
-  grid-area: equipo;
+  display: grid;
+}
+
+.consulta {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(6, 191, 204);
+  margin-bottom: 0;
+  padding: 2rem;
+}
+
+footer div {
+  background-color: #3a3548;
+  display: grid;
+  justify-items: center;
+  padding: 2rem;
+}
+footer h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 7rem;
+  background-color: #3a3548;
+  color: white;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+footer section {
+  display: flex;
+  justify-content: center;
+  background-color: #3a3548;
+  padding: 2rem;
+}
+footer p {
+  background-color: rgb(6, 191, 204);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+section .quienes {
+  color: aqua;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+section p {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.quienes_somos {
+  display: grid;
+  justify-items: center;
+  padding: 2rem;
+}
+.quienes_somos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quienes_somos div h3 {
+  color: aqua;
+  padding-bottom: 2rem;
+}
+.quienes_somos p {
+  padding-bottom: 3rem;
 }
 
 section h2 {
-  grid-area: consulta;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+section .tu-0km {
+  color: aqua;
+  padding-bottom: 5rem;
 }
 
-/* declaro las grid area index*/
-.div1 {
+/*declaro la grilla grid*/
+.quienes_somos .div1 {
   grid-area: div1;
 }
-
-.p1 {
+.quienes_somos .p1 {
   grid-area: p1;
 }
-
-.div2 {
+.quienes_somos .div2 {
   grid-area: div2;
 }
-
-.p2 {
+.quienes_somos .p2 {
   grid-area: p2;
 }
-
-.div3 {
+.quienes_somos .div3 {
   grid-area: div3;
 }
-
-.p3 {
+.quienes_somos .p3 {
   grid-area: p3;
-}
-
-/* declaro las grid area nuestros planes*/
-.p208 {
-  grid-area: p208;
-}
-
-.autop1 {
-  grid-area: descripcion208;
-}
-
-.partner {
-  grid-area: partner;
-}
-
-.autop2 {
-  grid-area: descripcionp;
-}
-
-/* empiezo la grilla general*/
-header {
-  background-color: #3a3548;
-  margin-bottom: 1.5em;
-  display: grid;
-  grid-template-areas: "logo" "nav" "equipo" "consulta" "footer";
-  gap: 20px;
-}
-@media (min-width: 500px) {
-  header header {
-    margin: 0;
-    display: grid;
-    grid-template-areas: "logo     nav" "consulta   consulta" "footer     footer";
-    gap: 5px;
-    grid-template-columns: 1fr 3fr;
-  }
-}
-@media (min-width: 768px) {
-  header header {
-    display: grid;
-    grid-template-areas: "logo       logo     logo" "nav        nav      nav" "consulta   consulta consulta" "footer     footer   footer";
-    gap: 5px;
-    grid-template-columns: 1fr 3fr 1fr;
-  }
 }
 
 .quienes_somos {
   margin: 0;
   display: grid;
-  grid-template-areas: "div1 p1" "div2 p2" "div3 p3";
+  grid-template-areas: "div1" "p1" "div2" "p2" "div3" "p3";
   gap: 20px;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
 }
-@media (min-width: 500px) {
-  .quienes_somos .quienes_somos {
-    display: grid;
-    grid-template-areas: "div1 p1" "div2 p2" "div3 p3";
-    grid-template-columns: 1fr 3fr;
-  }
-}
-@media (min-width: 768px) {
-  .quienes_somos .quienes_somos {
-    display: grid;
-    grid-template-areas: "div1 div2 div3" "p1   p2   p3";
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.autos {
-  margin: 0;
-  display: grid;
-  grid-template-areas: "p208    descripcion208" "partner descripcionp";
-  grid-template-columns: 2fr 2fr;
-}
-@media (min-width: 500px) {
-  .autos .a208 {
-    display: grid;
-    grid-template-areas: "p208    descripcion208" "partner descripcionp";
-    grid-template-columns: 2fr 3fr;
-  }
-}
-
-.equipo_trabajo img {
-  border: 8px solid rgb(32, 181, 218);
-  margin-top: 5px;
-}
-
-@media (min-width: 500px) {
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    color: rgb(32, 175, 218);
-    border: 3px solid rgb(32, 190, 218);
-    margin-top: 30px;
-  }
-  nav ul li {
-    padding: 1px;
-  }
-}
-footer {
-  margin-top: 0;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  text-align: center;
-  font-weight: bolder;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: rgb(32, 159, 218);
-}
-body header {
-  font-size: large;
-  display: grid;
+.quienes_somos div {
   justify-content: center;
 }
-body header nav ul {
-  color: rgb(32, 144, 218);
-  border: 3px solid rgb(32, 181, 218);
+
+/*1er mediaquery para la pagina index*/
+@media (min-width: 500px) {
+  .quienes_somos {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "div1 p1" "div2 p2" "div3 p3";
+    gap: 20px;
+    grid-template-columns: 1fr 3fr;
+  }
+  .quienes_somos div {
+    justify-content: center;
+  }
+  .equipo_trabajo {
+    width: 100%;
+    height: 100%;
+  }
 }
-body header nav ul li {
-  list-style-type: none;
-  border: rgb(0, 183, 255);
+/*declaro la 2da mediaquery*/
+@media (min-width: 768px) {
+  .quienes_somos {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "div1 div2 div3" "p1   p2   p3";
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
-body header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-body footer {
-  padding: 3em;
-  background-color: #3a3548;
-  margin-bottom: 0;
-  margin-top: 1.5em;
+/*aca entra una animacion de capa en la que hay que apretar la imagen*/
+.autos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-p, h1, h2, h3 {
-  color: white;
+.autos figure {
+  position: relative;
+  height: 250px;
+  cursor: pointer;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
 }
 
-.quienes_somos, .quienes {
-  background-color: #3a3548;
+.autos figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+
+.autos figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 103, 123, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.autos figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.autos figure:hover > .capa h3 {
   margin-bottom: 15px;
-  padding: 15px;
-}
-.quienes_somos div, .quienes_somos p, .quienes div, .quienes p {
-  border: 3px solid rgb(32, 196, 218);
 }
 
-.acompañamiento {
-  background-color: #3a3548;
+.autos figure .capa2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 103, 123, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
 }
 
-section h2 {
-  background-color: #3a3548;
-  padding: 10px;
+.autos figure:hover > .capa2 {
+  opacity: 1;
+  visibility: visible;
 }
 
-.clientes_felices img {
-  width: 300px;
-  height: 200px;
-  border: #3a3548 solid 5px;
+.autos figure:hover > .capa2 h3 {
+  margin-bottom: 15px;
 }
 
-.autos, .tu_0 {
-  background-color: #3a3548;
-  border: rgb(32, 196, 218) solid 5px;
+.autos figure:hover > img {
+  transform: scale(1.3);
 }
 
-.a208, .apartner {
-  border: rgb(32, 206, 218) solid 5px;
+.autos figure .capa h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+  margin-top: 30px;
 }
 
-.a208 p, .apartner p {
-  border: rgb(66, 198, 250);
+.autos figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.autos figure .capa2 h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+  margin-top: 30px;
+}
+
+.autos figure .capa2 p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.tu_0 h2, .tu_0 p {
+  display: flex;
+  justify-content: center;
+}
+.tu_0 h2 {
+  color: aqua;
+}
+
+/*declaro 1er mediaquery*/
+@media (min-width: 500px) {
+  .autos {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/*declaro 2da mediaquery*/
+@media (min-width: 768px) {
+  .autos {
+    padding: 5rem;
+  }
 }/*# sourceMappingURL=estilos.css.map */
